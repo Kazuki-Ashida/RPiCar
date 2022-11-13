@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <property name="local.dist.dir" value="d:\my-project2\rpi_car\target" />
+    <property name="remote.runtime.encoding" value="UTF-8" />
+    <property name="dist.jar.name" value="rpi_car" />
+    <ant antfile="antrun/build.xml" target="clean-remote" />
+  </target>
+</project>
