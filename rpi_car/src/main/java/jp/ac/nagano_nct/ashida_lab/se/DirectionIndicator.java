@@ -11,24 +11,46 @@ public abstract class DirectionIndicator extends Light {
 	 */
 	private static final int _BLINKING_INTERVAL = 250;
 
+	/** 点滅しているか */
+	private boolean _isBlinking = false;
+
 	/** コンストラクタ
 	 * @param pin_num 端子番号
 	 */
 	protected DirectionIndicator(int pin_num){
 		super(pin_num);
+		Thread t = new Thread(){
+			@Override
+			public void run(){
+				while(true){
+					try{
+						if(_isBlinking){
+							turnOn();
+							Thread.sleep(_BLINKING_INTERVAL);
+							turnOff();
+							Thread.sleep(_BLINKING_INTERVAL);
+						}
+					}catch(Exception e){
+						
+					}
+				}
+			}
+		};
+		t.start();
 	}
 	/**
 	 * 点滅開始
 	 */
 	public void startBlinking() {
-
+		_isBlinking = true;
 	}
 
 	/**
 	 * 点滅停止
 	 */
 	public void stopBlinking() {
-
+		_isBlinking = false;
+		turnOff();
 	}
 
 }
