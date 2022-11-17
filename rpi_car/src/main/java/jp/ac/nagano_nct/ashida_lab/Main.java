@@ -5,34 +5,37 @@
  */
 package jp.ac.nagano_nct.ashida_lab;
 
+import java.io.IOException;
+import java.lang.reflect.GenericDeclaration;
+
 import com.pi4j.Pi4J;
 
-
 import jp.ac.nagano_nct.ashida_lab.se.HeadLight;
-
-
+import jp.ac.nagano_nct.ashida_lab.se.RightDirectionIndicator;
 
 /**
  *
- * @author luca
+ * @author Ashida
  */
 public class Main {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws Exception {
-        HeadLight head_light = HeadLight.getInstance();
-        
-        for(int i=0; i<10; i++){
-            head_light.turnOn();
-            Thread.sleep(1000);
-            head_light.turnOff();
-            Thread.sleep(1000);
+    public static void main(String[] args) throws Exception{
+ 
+        try(RightDirectionIndicator r = RightDirectionIndicator.getInstance()){
+            r.startBlinking();
+            Thread.sleep(5000);
+            r.stopBlinking();
+    
+        }
+        catch( Exception e){
+
         }
 
-        Pi4J.newAutoContext().shutdown();
 
+        Pi4J.newAutoContext().shutdown();
     }
 
 }
