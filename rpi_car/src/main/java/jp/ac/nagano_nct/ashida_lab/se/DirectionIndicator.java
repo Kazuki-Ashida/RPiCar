@@ -14,7 +14,8 @@ public abstract class DirectionIndicator extends Light implements AutoCloseable{
 	/** 点滅しているか */
 	private boolean _isBlinking = false;
 
-	private boolean _done = false;
+	/** 終了したか */
+	private boolean _isDone = false;
 
 	/** コンストラクタ
 	 * @param pin_num 端子番号
@@ -24,7 +25,7 @@ public abstract class DirectionIndicator extends Light implements AutoCloseable{
 		Thread t = new Thread(){
 			@Override
 			public void run(){
-				while(!_done){
+				while(!_isDone){
 					try{
 						if(_isBlinking){
 							turnOn();
@@ -57,6 +58,6 @@ public abstract class DirectionIndicator extends Light implements AutoCloseable{
 
 	@Override
 	public void close() throws Exception{
-		_done = true;
+		_isDone = true;
 	}
 }
