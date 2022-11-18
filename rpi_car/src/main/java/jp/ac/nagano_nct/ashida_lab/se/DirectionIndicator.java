@@ -4,7 +4,7 @@ package jp.ac.nagano_nct.ashida_lab.se;
  * 方向指示器
  * @author ashida
  */
-public abstract class DirectionIndicator extends Light implements AutoCloseable{
+public abstract class DirectionIndicator extends Light{
 
 	/**
 	 * 点滅の間隔[ms]
@@ -12,10 +12,10 @@ public abstract class DirectionIndicator extends Light implements AutoCloseable{
 	private static final int _BLINKING_INTERVAL = 250;
 
 	/** 点滅しているか */
-	private boolean _isBlinking = false;
+	private volatile boolean _isBlinking = false;
 
 	/** 終了したか */
-	private boolean _isDone = false;
+	private volatile boolean _isDone = false;
 
 	/** コンストラクタ
 	 * @param pin_num 端子番号
@@ -56,8 +56,8 @@ public abstract class DirectionIndicator extends Light implements AutoCloseable{
 		turnOff();
 	}
 
-	@Override
-	public void close() throws Exception{
+	/** シャットダウン */
+	public void shutdown(){
 		_isDone = true;
 	}
 }
