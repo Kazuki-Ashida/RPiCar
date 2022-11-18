@@ -27,8 +27,9 @@ public class RightDirectionIndicator extends DirectionIndicator {
 	/**
 	 * インスタンスを得る
 	 * @return インスタンス
+	 * @throws 例外
 	 */
-	public static RightDirectionIndicator getInstance() throws Exception{
+	public static RightDirectionIndicator getInstance(){
 		return _instance;
 	}
 

@@ -24,17 +24,12 @@ public class Main {
      */
     public static void main(String[] args) throws Exception{
  
-        try(RightDirectionIndicator r = RightDirectionIndicator.getInstance()){
-            r.startBlinking();
-            Thread.sleep(5000);
-            r.stopBlinking();
-    
-        }
-        catch( Exception e){
+        RightDirectionIndicator r = RightDirectionIndicator.getInstance();
+        r.startBlinking();
+        Thread.sleep(5000);
+        r.stopBlinking();
 
-        }
-
-
+        r.shutdown();
         Pi4J.newAutoContext().shutdown();
     }
 
