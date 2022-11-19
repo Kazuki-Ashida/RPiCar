@@ -34,6 +34,9 @@ public class DrivingDivision extends Thread{
 	/** 適切な左右の回転比．(右のモータの回転数) ÷ (左のモータの回転数) */
 	private double _suitableRatio = 1.0F;
 
+	/** 終了したか */
+	private boolean _isDone = false;
+
 	/**
 	 * コンストラクタ
 	 */
@@ -148,7 +151,7 @@ public class DrivingDivision extends Thread{
 
 	@Override
 	public void run(){
-		while(true) {
+		while(_isDone) {
 			/* 動作中の場合 */
 			while (_isRunning) {
 				/* 現在の回転比を得る */
@@ -167,6 +170,11 @@ public class DrivingDivision extends Thread{
 				}
 			}
 		}
+	}
+
+	/** シャットダウンする */
+	void shutdown(){
+		_isDone = true;
 	}
 
 
