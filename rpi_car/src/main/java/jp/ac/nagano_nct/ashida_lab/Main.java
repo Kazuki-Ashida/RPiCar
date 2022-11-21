@@ -10,6 +10,8 @@ import java.lang.reflect.GenericDeclaration;
 
 import com.pi4j.Pi4J;
 
+import jp.ac.nagano_nct.ashida_lab.se.Beeper;
+import jp.ac.nagano_nct.ashida_lab.se.Camera;
 import jp.ac.nagano_nct.ashida_lab.se.HeadLight;
 import jp.ac.nagano_nct.ashida_lab.se.RightDirectionIndicator;
 
@@ -22,14 +24,12 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
  
-        RightDirectionIndicator r = RightDirectionIndicator.getInstance();
-        r.startBlinking();
-        Thread.sleep(5000);
-        r.stopBlinking();
+        Camera camera = Camera.getInstance();
 
-        r.shutdown();
+        camera.takePicture(800,600);
+
         Pi4J.newAutoContext().shutdown();
     }
 

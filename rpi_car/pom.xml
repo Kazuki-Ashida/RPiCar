@@ -26,6 +26,7 @@
 
         <slf4j.version>1.7.32</slf4j.version>
         <pi4j.version>2.1.0</pi4j.version>
+        <pi4j-example-components.version>0.0.1</pi4j-example-components.version>
     </properties>
 
     <dependencies>
@@ -58,6 +59,7 @@
             <artifactId>pi4j-plugin-pigpio</artifactId>
             <version>${pi4j.version}</version>
         </dependency>
+
     </dependencies>
         
     <build>

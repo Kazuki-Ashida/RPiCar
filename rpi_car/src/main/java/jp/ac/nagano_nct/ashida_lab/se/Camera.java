@@ -1,6 +1,7 @@
 package jp.ac.nagano_nct.ashida_lab.se;
 import java.io.File;
 
+
 /**
  * カメラ
  * @author ashida
@@ -24,7 +25,10 @@ public class Camera {
 	 * @return インスタンス
 	 */
 	public static Camera getInstance() {
-		return null;
+		if(_instance == null){
+			_instance = new Camera();
+		}
+		return _instance;
 	}
 
 	/**
@@ -34,19 +38,21 @@ public class Camera {
 	 * @return 撮影したファイル(PNG)
 	 */
 	public File takePicture(int width, int height) {
-/*
-		var config = Camera.PicConfig.Builder.outputPath("/home/rpi_car/Pictures/")
+
+		var config = com.pi4j.catalog.components.Camera.PicConfig.Builder.newInstance().outputPath("/home/rpi-car/Pictures/")
 		.delay(3000)
 		.disablePreview(true)
-		.encoding(Camera.PicEncoding.PNG)
+		.encoding(com.pi4j.catalog.components.Camera.PicEncoding.PNG)
 		.useDate(true)
 		.quality(93)
 		.width(width)
 		.height(height)
 		.build();
 
+		com.pi4j.catalog.components.Camera camera= new com.pi4j.catalog.components.Camera();
 		camera.takeStill(config);
-		*/
+
+	
 		return null;
 	}
 
