@@ -5,6 +5,7 @@
  */
 package jp.ac.nagano_nct.ashida_lab;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.GenericDeclaration;
 
@@ -28,7 +29,9 @@ public class Main {
  
         Camera camera = Camera.getInstance();
 
-        camera.takePicture(800,600);
+        File file = camera.takePicture(800,600);
+
+        System.out.println(file.getAbsolutePath());
 
         Pi4J.newAutoContext().shutdown();
     }

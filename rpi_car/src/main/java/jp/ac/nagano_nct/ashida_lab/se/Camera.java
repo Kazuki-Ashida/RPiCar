@@ -1,6 +1,6 @@
 package jp.ac.nagano_nct.ashida_lab.se;
 import java.io.File;
-
+import java.time.LocalDateTime;
 
 /**
  * カメラ
@@ -39,11 +39,12 @@ public class Camera {
 	 */
 	public File takePicture(int width, int height) {
 
-		var config = com.pi4j.catalog.components.Camera.PicConfig.Builder.newInstance().outputPath("/home/rpi-car/Pictures/")
+		String file_name = LocalDateTime.now().toString()+"."+com.pi4j.catalog.components.Camera.PicEncoding.PNG.getEncoding();
+		var config = com.pi4j.catalog.components.Camera.PicConfig.Builder.newInstance().outputPath("/home/rpi-car/Pictures/"+file_name)
 		.delay(3000)
 		.disablePreview(true)
 		.encoding(com.pi4j.catalog.components.Camera.PicEncoding.PNG)
-		.useDate(true)
+		.useDate(false)
 		.quality(93)
 		.width(width)
 		.height(height)
@@ -53,7 +54,7 @@ public class Camera {
 		camera.takeStill(config);
 
 	
-		return null;
+		return new File("/home/rpi-car/Pictures/"+file_name);
 	}
 
 	/**  ビデオを撮影する
