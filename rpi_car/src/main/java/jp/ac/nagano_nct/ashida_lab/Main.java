@@ -26,14 +26,16 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
- 
+
         Camera camera = Camera.getInstance();
+        camera.setWidth(3280)
+                .setHeight(2464)
+                .setFileName("Test")
+                .setFormat(Camera.Format.JPG);
 
         File file = camera.takePicture();
 
         System.out.println(file.getAbsolutePath());
-
-        Pi4J.newAutoContext().shutdown();
     }
 
 }
