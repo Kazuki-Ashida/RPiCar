@@ -29,7 +29,7 @@ public class Main {
  
         Camera camera = Camera.getInstance();
 
-        File file = camera.takePicture(800,600);
+        File file = camera.takePicture();
 
         System.out.println(file.getAbsolutePath());
 
