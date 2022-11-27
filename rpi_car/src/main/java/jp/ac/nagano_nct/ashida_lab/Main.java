@@ -13,6 +13,7 @@ import com.pi4j.Pi4J;
 
 import jp.ac.nagano_nct.ashida_lab.se.Beeper;
 import jp.ac.nagano_nct.ashida_lab.se.Camera;
+import jp.ac.nagano_nct.ashida_lab.se.DrivingDivision;
 import jp.ac.nagano_nct.ashida_lab.se.HeadLight;
 import jp.ac.nagano_nct.ashida_lab.se.RightDirectionIndicator;
 
@@ -27,15 +28,13 @@ public class Main {
      */
     public static void main(String[] args) throws Exception {
 
-        Camera camera = Camera.getInstance();
-        camera.setWidth(3280)
-                .setHeight(2464)
-                .setFileName("Test")
-                .setFormat(Camera.Format.JPG);
+        DrivingDivision dd = DrivingDivision.getInstance();
 
-        File file = camera.takePicture();
+        dd.steer(50, 75);
+        Thread.sleep(3000);
+        dd.stopMotion();
 
-        System.out.println(file.getAbsolutePath());
+        Pi4J.newAutoContext().shutdown();
     }
 
 }
