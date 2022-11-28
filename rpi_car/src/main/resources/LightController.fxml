@@ -49,7 +49,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="494.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="637.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -97,9 +97,9 @@
       </FlowPane>
       <FlowPane alignment="CENTER">
          <children>
-            <CheckBox mnemonicParsing="false" text="CheckBox" />
-            <CheckBox mnemonicParsing="false" text="CheckBox" />
-            <CheckBox mnemonicParsing="false" text="CheckBox" />
+            <CheckBox mnemonicParsing="false" />
+            <CheckBox mnemonicParsing="false" />
+            <CheckBox mnemonicParsing="false" />
          </children>
       </FlowPane>
       <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
@@ -111,23 +111,37 @@
          <children>
             <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" scaleX="0.3" scaleY="0.3">
+                  <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/beeper.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" />
+            <Button accessibleRole="TOGGLE_BUTTON" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/snap.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button accessibleRole="TOGGLE_BUTTON" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/head_light.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
       </FlowPane>
-      <BorderPane prefHeight="200.0" prefWidth="200.0">
+      <BorderPane>
          <center>
-            <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+            <GridPane alignment="CENTER" prefHeight="176.0" prefWidth="387.0" BorderPane.alignment="CENTER">
               <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -135,7 +149,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" GridPane.columnIndex="1">
+                  <Button accessibleRole="TOGGLE_BUTTON" alignment="TOP_LEFT" mnemonicParsing="false" GridPane.columnIndex="1">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -143,7 +157,7 @@
                            </image></ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" GridPane.rowIndex="1">
+                  <Button accessibleRole="TOGGLE_BUTTON" mnemonicParsing="false" GridPane.rowIndex="1">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -151,7 +165,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button accessibleRole="TOGGLE_BUTTON" alignment="TOP_LEFT" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -159,7 +173,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Button accessibleRole="TOGGLE_BUTTON" alignment="TOP_LEFT" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -167,7 +181,14 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/brake.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                </children>
             </GridPane>
          </center>
