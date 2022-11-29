@@ -48,8 +48,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 
-<VBox prefHeight="637.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="569.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -97,17 +98,20 @@
       </FlowPane>
       <FlowPane alignment="CENTER">
          <children>
-            <CheckBox mnemonicParsing="false" />
-            <CheckBox mnemonicParsing="false" />
-            <CheckBox mnemonicParsing="false" />
+            <Circle fill="DODGERBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="DODGERBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="DODGERBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </FlowPane>
-      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+      <FlowPane alignment="CENTER" prefHeight="200.0">
          <children>
-            <Label text="Label" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@SampleImage.png" />
+               </image></ImageView>
          </children>
       </FlowPane>
-      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+      <FlowPane alignment="CENTER">
          <children>
             <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false">
                <graphic>
