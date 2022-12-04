@@ -52,7 +52,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 
-<VBox prefHeight="550.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="550.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jp.ac.nagano_nct.ashida_lab.RPiCarController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -122,7 +122,7 @@
          <children>
             <ImageView fx:id="pictureImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@SampleImage.png" />
+                  <Image url="@../../../../../resources/SampleImage.png" />
                </image></ImageView>
          </children>
       </FlowPane>
@@ -132,7 +132,7 @@
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/beeper.png" />
+                        <Image url="@../../../../../resources/images/beeper.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -143,7 +143,7 @@
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/snap.png" />
+                        <Image url="@../../../../../resources/images/snap.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -154,7 +154,7 @@
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/head_light.png" />
+                        <Image url="@../../../../../resources/images/head_light.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -179,7 +179,7 @@
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/left_rotate_arrow.png" />
+                              <Image url="@../../../../../resources/images/left_rotate_arrow.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -188,7 +188,7 @@
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/brake.png" />
+                              <Image url="@../../../../../resources/images/brake.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -197,7 +197,7 @@
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/up_arrow.png" />
+                              <Image url="@../../../../../resources/images/up_arrow.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -206,7 +206,7 @@
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/down_arrow.png" />
+                              <Image url="@../../../../../resources/images/down_arrow.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -215,7 +215,7 @@
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/right_rotate_arrow.png" />
+                              <Image url="@../../../../../resources/images/right_rotate_arrow.png" />
                            </image>
                         </ImageView>
                      </graphic>
