@@ -16,17 +16,36 @@ import jp.ac.nagano_nct.ashida_lab.se.Camera;
 import jp.ac.nagano_nct.ashida_lab.se.DrivingDivision;
 import jp.ac.nagano_nct.ashida_lab.se.HeadLight;
 import jp.ac.nagano_nct.ashida_lab.se.RightDirectionIndicator;
-
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 /**
  *
  * @author Ashida
  */
-public class Main {
+public class Main extends Application{
+
+
+    @Override
+    public void start(Stage stage) {
+        var javaVersion = SystemInfo.javaVersion();
+        var javafxVersion = SystemInfo.javafxVersion();
+
+        var label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
+        var scene = new Scene(new StackPane(label), 640, 480);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
+
+        launch();
 
         DrivingDivision dd = DrivingDivision.getInstance();
 

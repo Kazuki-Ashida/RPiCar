@@ -5,6 +5,7 @@ module jp.ac.nagano_nct.ashida_lab.rpi_car {
     requires com.pi4j.plugin.raspberrypi;
     requires com.pi4j.plugin.pigpio;
     requires com.pi4j.library.pigpio;
+    requires javafx.controls;
 
     uses com.pi4j.extension.Extension;
     uses com.pi4j.provider.Provider;
