@@ -128,7 +128,7 @@
       </FlowPane>
       <FlowPane alignment="CENTER">
          <children>
-            <Button fx:id="hornButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false">
+            <Button fx:id="hornButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHornButtonAction">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -139,7 +139,7 @@
                <FlowPane.margin>
                   <Insets />
                </FlowPane.margin></Button>
-            <Button fx:id="takePictureButton" accessibleRole="TOGGLE_BUTTON" mnemonicParsing="false">
+            <Button fx:id="takePictureButton" accessibleRole="TOGGLE_BUTTON" mnemonicParsing="false" onAction="#handleTakePictureButtonAction">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -150,7 +150,7 @@
                <FlowPane.margin>
                   <Insets left="20.0" right="20.0" />
                </FlowPane.margin></Button>
-            <ToggleButton fx:id="headLightToggleButton" mnemonicParsing="false" onAction="#handleButtonAction">
+            <ToggleButton fx:id="headLightToggleButton" mnemonicParsing="false" onAction="#handleHeadLightToggleButtonAction">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -175,7 +175,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ToggleButton fx:id="rotateLeftToggleButton" mnemonicParsing="false" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="rotateLeftToggleButton" mnemonicParsing="false" onAction="#handleRotateLeftToggleButtonAction" GridPane.rowIndex="1">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -184,7 +184,7 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <Button fx:id="stopButton" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button fx:id="stopButton" mnemonicParsing="false" onAction="#handleStopButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -193,7 +193,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <ToggleButton fx:id="goForwardToggleButton" mnemonicParsing="false" GridPane.columnIndex="1">
+                  <ToggleButton fx:id="goForwardToggleButton" mnemonicParsing="false" onAction="#handleGoForwardToggleButtonAction" GridPane.columnIndex="1">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -202,7 +202,7 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="goBackToggleButton" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <ToggleButton fx:id="goBackToggleButton" mnemonicParsing="false" onAction="#handleGoBackToggleButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -211,7 +211,7 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <ToggleButton fx:id="rotateRightToggleButton" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <ToggleButton fx:id="rotateRightToggleButton" mnemonicParsing="false" onAction="#handleRotateRightToggleButtonAction" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -242,7 +242,7 @@
             </VBox>
          </right>
          <bottom>
-            <CheckBox fx:id="synchronizeMoterCheckBox" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="連動" BorderPane.alignment="CENTER" />
+            <CheckBox fx:id="synchronizeMotorCheckBox" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#handleSynchronizeMotorCheckBoxAction" text="連動" BorderPane.alignment="CENTER" />
          </bottom>
       </BorderPane>
   </children>
