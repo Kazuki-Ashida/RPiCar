@@ -128,7 +128,7 @@
       </FlowPane>
       <FlowPane alignment="CENTER">
          <children>
-            <Button fx:id="hornButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onTouchPressed="#handleHornButtonTouchPressed" onTouchReleased="#handleHornButtonTouchReleased">
+            <Button fx:id="hornButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHornButtonAction">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -184,7 +184,7 @@
                         </ImageView>
                      </graphic>
                   </ToggleButton>
-                  <Button fx:id="stopButton" mnemonicParsing="false" onTouchPressed="#handleStopButtonTouchPressed" onTouchReleased="#handleStopButtonTouchReleased" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button fx:id="stopButton" mnemonicParsing="false" onAction="#handleStopButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>

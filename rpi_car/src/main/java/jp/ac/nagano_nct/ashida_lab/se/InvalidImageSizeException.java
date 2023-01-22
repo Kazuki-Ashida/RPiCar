@@ -16,7 +16,7 @@ public class InvalidImageSizeException extends RuntimeException {
 	 * @param invalid_size 不正なサイズ
 	 */
 	public InvalidImageSizeException(int invalid_size) {
-
+		_invalidSize=invalid_size;
 	}
 
 	/**
@@ -24,7 +24,7 @@ public class InvalidImageSizeException extends RuntimeException {
 	 * @return 不正なサイズ
 	 */
 	public int getInvalidSize() {
-		return 0;
+		return _invalidSize;
 	}
 
 }

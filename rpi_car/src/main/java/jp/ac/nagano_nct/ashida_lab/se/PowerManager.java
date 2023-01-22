@@ -3,7 +3,6 @@ package jp.ac.nagano_nct.ashida_lab.se;
 import com.pi4j.Pi4J;
 import com.pi4j.context.Context;
 import com.pi4j.io.gpio.digital.DigitalInput;
-import com.pi4j.io.gpio.digital.DigitalStateChangeListener;
 
 /**
  * 電源管理
